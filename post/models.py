@@ -16,3 +16,10 @@ class Post(models.Model):
     datetime = models.DateTimeField(auto_now=True)
     body = models.CharField(max_length=200)
     category = models.CharField(max_length=20, choices=[(status.value, status.name) for status in category])
+
+
+class Comment(models.Model):
+    #author = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    text = models.TextField()
+    datetime = models.DateTimeField(auto_now=True)

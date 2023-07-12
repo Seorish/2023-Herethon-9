@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Post
+from .models import Post, Comment
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
@@ -56,10 +56,53 @@ def post_list(request):
 
 def post_detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
+    post_id = post_id
+    page = request.GET.get('page')
+
+    # 댓글 생성
+    if request.method == 'POST':
+        comment = Comment()
+        comment.post = post
+        comment.text = request.POST['text']
+        comment.save()
+        return redirect('post_detail', post_id=post_id)
+
+
+    # 댓글 페이징 처리
+    comments = post.comments.order_by('datetime')
+
+    paginator = Paginator(comments, 2)
+
+
+    try:
+        page_obj = paginator.page(page)
+    except PageNotAnInteger: #페이지 첫화면일 때
+        page = 1
+        page_obj = paginator.page(page)
+    except EmptyPage: #댓글이 없을때
+        page = paginator.num_pages
+        page_obj = paginator.page(page)
+
+#댓글 페이지 총 5장씩
+    leftIndex = (int(page) - 2)
+    if leftIndex < 1:
+        leftIndex = 1
+
+    rightIndex = (int(page) + 2)
+
+    if rightIndex > paginator.num_pages:
+        rightIndex = paginator.num_pages
+
+    custom_range = range(leftIndex, rightIndex+1)
 
     context = {
         'post': post,
+        'comments': comments,
+        'custom_range': custom_range,
+        'page_obj': page_obj,
+        'paginator': paginator,
     }
 
     return render(request, 'html/post_detail.html', context)
+
 

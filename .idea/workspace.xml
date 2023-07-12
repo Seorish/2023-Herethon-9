@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faa25e48-2f12-40d9-b0fb-235d762c7dc8" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/html/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/html/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/templates/html/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/html/post_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

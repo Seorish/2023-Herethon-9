@@ -291,3 +291,6 @@
 
   mix-blend-mode: darken;
 }
+#map {
+  border-radius: 10px;
+}

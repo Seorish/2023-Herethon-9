@@ -58,25 +58,23 @@
         <!-- 카카오 맵 api -->
         <div
           id="map"
-          style="width: 200px; height: 200px; top: 270px; left: 80px"
+          style="width: 320px; height: 230px; top: 220px; left: 20px"
         ></div>
-        <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=32c156d387fdb66c7b70a18f4e30fa4e"></script>
+        <script
+          type="text/javascript"
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=32c156d387fdb66c7b70a18f4e30fa4e"
+        ></script>
         <script>
-          // 카카오 맵 API가 로드된 후에 실행되는 코드
-          var container = document.getElementById("map");
-          var options = {
-            center: new kakao.maps.LatLng(33.450701, 126.570667),
+          var mapContainer = document.getElementById("map");
+          var mapOption = {
+            center: new kakao.maps.LatLng(38.036845741, 128.5594244943),
             level: 3,
           };
-          var map = new kakao.maps.Map(container, options);
 
-          // kakao.maps에 접근하는 코드
-          // 예시: 지도 위에 마커 추가하기
-          var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-          var marker = new kakao.maps.Marker({
-            position: markerPosition,
-          });
-          marker.setMap(map);
+          var map = new kakao.maps.Map(mapContainer, mapOption);
+
+          var attractions = JSON.parse("{{ attractionJson|safe }}");
+          console.log(attractions);
         </script>
       </div>
     </div>

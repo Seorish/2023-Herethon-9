@@ -66,7 +66,7 @@
     display: flex;
     align-items: center;
 
-    width: 313px;
+    width: 290px;
     height: 0px;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }
@@ -74,13 +74,13 @@
 #top-box {
     display: flex;
     flex-direction: column;
-    margin-left: 13px;
+    margin-left: 25px;
 }
 
 .box {
     /* 박스 그림자 및 크기 설정 */
     position: relative;
-    width: 322px;
+    width: 300px;
     height: 323px;
     flex-shrink: 0;
 
@@ -114,6 +114,12 @@
     align-items: center;
 }
 
+/* 이모지 칸 관련 css */
+.emo-contents {
+    width: 300px;
+    height: 130px;
+}
+
 #text {
     /* 누군가 뒤따라오고 있어요! */
     position: absolute;
@@ -127,8 +133,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
-    /* or 131% */
-    text-align: center;
     letter-spacing: -0.32px;
 
     color: #000000;
@@ -192,7 +196,7 @@
 }
 #face {
     position: relative;
-    left: 205px;
+    left: 190px;
     top: -33px;
 }
 
@@ -200,11 +204,11 @@
     display: flex;
     align-items: center;
 
-    width: 281px;
+    width: 270px;
     height: 0px;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 
-    margin: 0px 20px 10px;
+    margin: 0px 10px 20px;
 }
 
 .text-contents {

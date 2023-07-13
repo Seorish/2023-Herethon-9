@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'userinfo',
     'phonenumber_field',
     'main',
-    'accident_solution'
+
 ]
 
 MIDDLEWARE = [

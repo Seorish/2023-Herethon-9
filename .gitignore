@@ -1,7 +1,12 @@
-# .gitignore
+
 /shelf/
 /workspace.xml
 /myvenv/
 /.idea/
+/post/migrations/
+/post/__pyache__/
 /userinfo/migrations/
-/__pycache__/
+/accounts/migrations/
+/accounts/__pyache__/
+/userinfo/__pyache__/
+/wofety/__pyache__/

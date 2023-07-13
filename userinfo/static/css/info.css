@@ -1,0 +1,159 @@
+#container {
+  position: relative;
+  max-width: 360px;
+  max-height: calc(100vh - 68px);
+  margin: 0px auto;
+  background: linear-gradient(to top, #f4eee9, #f2f2f2);
+  overflow-y: auto;
+}
+
+#scroll {
+  height: 612px;
+  overflow-y: auto;
+}
+
+#title {
+  position: relative;
+  top: 0;
+  left: 20px;
+  margin-top: 20px;
+  font-size: small;
+  background-color: transparent;
+  z-index: 1;
+}
+
+#t_name {
+  position: sticky;
+  top: 92px;
+  left: 21px;
+  font-weight: bold;
+  background-color: transparent;
+  z-index: 1;
+}
+
+#t_id {
+  position: sticky;
+  top: 117px;
+  left: 21px;
+  font-size: small;
+  background-color: transparent;
+  z-index: 1;
+}
+
+#logo_b {
+  position: sticky;
+  top: 76px;
+  left: 265px;
+  z-index: 1;
+}
+
+#logo {
+  position: sticky;
+  top: 84px;
+  left: 272px;
+  z-index: 1;
+}
+
+form {
+  position: relative;
+  top: 0;
+  left: 20px;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: transparent;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form select {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-row label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.input-container {
+  display: flex;
+}
+
+.divider {
+  margin: 0px 5px;
+}
+
+/* 하단바 설정 */
+#underBar {
+  position: fixed;
+  bottom: 0;
+  width: 360px;
+  height: 68px;
+  background: #f2f2f2;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 20px 20px 0px 0px;
+  z-index: 2;
+}
+
+#bulb {
+  position: relative;
+  left: 35px;
+  top: -12px;
+}
+
+#home {
+  position: relative;
+  left: 60px;
+  top: -13px;
+}
+
+#circle {
+  position: relative;
+  left: 85px;
+  top: 5px;
+}
+
+#logo_s {
+  position: relative;
+  left: 27px;
+  top: -7px;
+}
+
+#edit_square {
+  width: 28px;
+  position: relative;
+  left: 53px;
+  top: -16px;
+}
+
+#account_circle {
+  width: 29px;
+  position: relative;
+  left: 80px;
+  top: -13px;
+}
+
+input[type="submit"] {
+  position: sticky;
+  bottom: 0;
+  width: 150px;
+  background-color: #f2f2f2;
+  padding: 8px 0;
+  margin-top: 10px;
+  border-radius: 10px;
+  z-index: 1;
+}

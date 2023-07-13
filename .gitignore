@@ -4,3 +4,4 @@
 /myvenv/
 /.idea/
 /userinfo/migrations/
+/__pycache__/

@@ -4,6 +4,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--폰트 설정-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
+            rel="stylesheet"
+        />
         <title>사고 대처 방안 페이지</title>
         <link rel="stylesheet" href="{% static 'css/solution.css' %}" />
     </head>
@@ -13,7 +20,7 @@
             <div id="scroll">
                 <div id="top-box">
                     <div id="top-app">
-                        <p id="SOS">SOS</p>
+                        <img id="SOS" src="{% static 'img/SOS.svg' %}" />
                         <img id="woofty" src="{% static 'img/woofty.svg' %}" />
                         <img id="siren" src="{% static 'img/siren.svg' %}" />
                     </div>

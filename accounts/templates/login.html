@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <head>
-    
+    <title>로그인 페이지</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <!--폰트 설정-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,8 +15,8 @@
     <div class="container">
         <img class="logo" src="{% static 'img/logo_login.svg' %}" />
         <div  class="top-contents">
-            <h2 class="hello">안녕하세요.</h2>
-            <h3  class="service"> 여성에 의한, 여성을 위한 안심서비스</h3>
+            <img class="hello" src="{% static 'img/login_hello.svg' %}" />
+            <img class="service" src="{% static 'img/login_service.svg' %}" />
             <h3  class="OOFT">OOFT입니다.<h3>
         </div>
         <form method="POST" action="{%url 'login'%}">
@@ -25,7 +25,7 @@
             <input name="custom_id" type="text" placeholder="아이디" class="input"/>
             <!-- 비밀번호 -->
             <input name="password" type="password" placeholder="비밀번호" class="input"/>
-            <a href='{% url "signup" %}' class="signup">회원가입</a>
+            <a href='{% url "signup" %}' class="signup"><img src="{% static 'img/login_signup.svg' %}" /></a>
             <input type="submit" class="btn btn-primary" value="로그인 하기" />
         </form>
 
